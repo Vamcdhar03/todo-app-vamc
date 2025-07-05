@@ -58,7 +58,7 @@ data:
       username varchar(255) DEFAULT NULL,
       title varchar(255) DEFAULT NULL,
       PRIMARY KEY (id)
-    ) ENGINE=InnoDB AUTO_INCREMENT=8;
+    ) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4;
 ---
 apiVersion: v1
 kind: Service
