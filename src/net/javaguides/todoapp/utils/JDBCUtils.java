@@ -10,12 +10,12 @@ public class JDBCUtils {
 
 	private static String jdbcURL = "jdbc:mysql://mysqldb:3306/todo_management";
 	private static String jdbcUsername = "root";
-	private static String jdbcPassword = System.getenv("MYSQL_ROOT_PASSWORD") != null ? System.getenv("MYSQL_ROOT_PASSWORD") : "Vamc2004";
+	private static String jdbcPassword = System.getenv("MYSQL_PASSWORD");
 
 	public static Connection getConnection() {
 		Connection connection = null;
 		try {
-			Class.forName("com.mysql.cj.jdbc.Driver");
+			Class.forName("com.mysql.jdbc.Driver");
 			connection = DriverManager.getConnection(jdbcURL, jdbcUsername, jdbcPassword);
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
