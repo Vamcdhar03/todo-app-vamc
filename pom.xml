@@ -38,7 +38,7 @@
         </dependency>
     </dependencies>
     <build>
-        <finalName>todo-app</finalName>
+        <finalName>vamc-todo-app</finalName>
         <sourceDirectory>src</sourceDirectory>
         <resources>
             <resource>
