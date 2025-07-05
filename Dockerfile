@@ -10,4 +10,6 @@ COPY target/vamc-todo-app.war /usr/local/tomcat/webapps/ROOT.war
 EXPOSE 8080
 
 # Run Tomcat using the catalina.sh script
-CMD ["catalina.sh", "run"]
+# CMD ["catalina.sh", "run"]
+CMD catalina.sh run
+
