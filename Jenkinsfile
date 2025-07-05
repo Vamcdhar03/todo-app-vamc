@@ -20,9 +20,9 @@ pipeline {
         stage('Docker build & push') {
             steps {
                  sh 'aws ecr get-login-password --region ap-south-1 | docker login --username AWS --password-stdin 084056488581.dkr.ecr.ap-south-1.amazonaws.com'
-                 sh 'docker build -t vamc/todo-app .'
-                 sh 'docker tag vamc/todo-app:latest 084056488581.dkr.ecr.ap-south-1.amazonaws.com/vamc/todo-app:latest'
-                 sh 'docker push 084056488581.dkr.ecr.ap-south-1.amazonaws.com/vamc/todo-app:latest'
+                 sh 'docker build -t vamc/todo-app:v2 .'
+                 sh 'docker tag vamc/todo-app:v2 084056488581.dkr.ecr.ap-south-1.amazonaws.com/vamc/todo-app:v2'
+                 sh 'docker push 084056488581.dkr.ecr.ap-south-1.amazonaws.com/vamc/todo-app:v2'
             }
         }
         stage('Kubernetes upload'){
