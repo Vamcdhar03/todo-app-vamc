@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('git checkout') {
             steps {
-                 git 'https://github.com/Vamcdhar03/todo-application-jsp-servlet-jdbc-mysql.git'
+                 git 'https://github.com/Vamcdhar03/todo-app-vamc.git'
             }
         }
         stage('Maven') {
@@ -35,6 +35,7 @@ export AWS_SESSION_TOKEN="$(echo ${CREDENTIALS} | jq -r '.Credentials.SessionTok
 export AWS_EXPIRATION=$(echo ${CREDENTIALS} | jq -r '.Credentials.Expiration')
 aws eks update-kubeconfig --name demo --region ap-south-1
 kubectl apply -f manifests/.
+kubectl get svc
                 '''
             }
         }
