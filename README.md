@@ -168,7 +168,14 @@ terraform apply tfplan
 ```
 
 ---
+## Output
+### Jenkins Pipeline - Successful Build
+![Jenkins Pipeline](screenshots/pipeline.png)
 
+### Login Page of TODO App
+![Login Page](screenshots/output.png)
+
+---
 ## Author
 
 **G. Vamshidhar**  
